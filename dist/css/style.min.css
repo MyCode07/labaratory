@@ -1,0 +1,53 @@
+@font-face {
+  font-family: gilroy;
+  font-display: swap;
+  src: url("../fonts/gilroy-regular.woff2") format("woff2"), url("../fonts/gilroy-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+._link-underline {
+  width: fit-content;
+  position: relative;
+}
+._link-underline:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 2px;
+  background-color: #000;
+  bottom: -6px;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  ._link-underline:hover a {
+    color: #000;
+  }
+  ._link-underline:hover:before {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1398px;
+  margin: 0 auto;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
