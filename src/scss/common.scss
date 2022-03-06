@@ -1,0 +1,25 @@
+.blue-btn {
+    background: linear-gradient(105.26deg, #a0c6ff 15.4%, #003e9b 80.81%);
+    border-radius: 12px;
+
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.section-title {
+    font-family: Gilroy;
+    font-weight: 400;
+    @include adaptive-value('font-size', 50, 15, 1);
+    line-height: 120%;
+    text-align: center;
+    color: #000000;
+}
+
+mark{
+    background-color: inherit;
+    line-height: inherit;
+}

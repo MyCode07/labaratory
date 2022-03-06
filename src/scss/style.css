@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  background-color: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-display: swap;
+  src: url("../fonts/gilroy-regular.woff2") format("woff2"), url("../fonts/gilroy-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+._link-underline {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+._link-underline:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 2px;
+  background-color: #000;
+  bottom: -6px;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  ._link-underline:hover a {
+    color: #000;
+  }
+  ._link-underline:hover:before {
+    width: 100%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1397px;
+  margin: 0 auto;
+}
+@media (max-width: 1437) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 39px 0 14px 0;
+}
+.header__logo {
+  width: 186px;
+  height: 65px;
+  position: relative;
+  display: block;
+}
+.header__logo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.header__main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.header__contacts {
+  display: flex;
+  align-items: flex-start;
+}
+.header__contacts-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.header__contacts-item span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #393939;
+}
+.header__menu-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 266px;
+}
+.header__menu-body :not(:last-child) {
+  margin-right: 100px;
+}
+.header__menu-link {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 117%;
+  text-align: center;
+  color: #000000;
+}
+
+.main,
+.services,
+.steps,
+.complaint,
+.contacts__us,
+.location,
+.footer {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

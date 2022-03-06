@@ -1,11 +1,13 @@
-// document.addEventListener('click', function (e) {
-//     let targetEl = e.target;
-//     if (targetEl.classList.contains('header__burger')) {
-//         targetEl.classList.toggle('_active');
-//         document.querySelector('.header__menu').classList.toggle('_active');
-//         document.querySelector('.page').classList.toggle('_moved');
-//     }
-// });
+document.addEventListener('click', function (e) {
+    let targetEl = e.target;
+    if (targetEl.classList.contains('header__burger')) {
+        document.querySelector('.header__menu').classList.add('_active');
+    }
+
+    if (targetEl.classList.contains('header__menu-top-close')) {
+        document.querySelector('.header__menu').classList.remove('_active');
+    }
+});
 
 // if (document.querySelector('.feedback__slider')) {
 //     new Swiper('.feedback__slider', {

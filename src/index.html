@@ -12,39 +12,41 @@
                     <div class="main__body">
                         <div class="main__top">
                             <h1 class="main__title">Испытательная лаборатория “БИОХИМ” <br> ИБХТН проводит
-                                клинические, <br> токсикологические, физико-химические <br> и микробиологические
-                                испытания.</h1>
+                                <mark class="main__title-marked">клинические, <br> токсикологические, физико-химические
+                                    <br> и микробиологические
+                                    испытания.</mark>
+                            </h1>
                             <div class="main__image">
                                 <img src="img/top-girl.png" alt="">
                             </div>
-                            <button class="main__button">Получить консультацию</button>
+                            <button class="main__button blue-btn">Получить консультацию</button>
                         </div>
                     </div>
                     <div class="main__intro">
                         <div class="main__intro-body">
                             <div class="main__intro-item item-intro">
-                                <div class="item-intro__image">
+                                <div class="item-intro__image" id="microscope">
                                     @@include('img/svg/microscope.svg')
                                 </div>
-                                <span class="item-intro__text">Микробиологические испытания</span>
+                                <span class="item-intro__text">Микробиологические <br> испытания</span>
                             </div>
-                            <div class="main__intro-item">
-                                <div class="item-intro__image">
+                            <div class="main__intro-item item-intro">
+                                <div class="item-intro__image" id="dangerous">
                                     @@include('img/svg/dangerous.svg')
                                 </div>
-                                <span class="item-intro__text">Токсикологические испытания</span>
+                                <span class="item-intro__text">Токсикологические <br> испытания</span>
                             </div>
-                            <div class="main__intro-item">
-                                <div class="item-intro__image">
-                                    @@include('img/svg/microscope.svg')
+                            <div class="main__intro-item item-intro">
+                                <div class="item-intro__image" id="croud">
+                                    @@include('img/svg/croud.svg')
                                 </div>
-                                <span class="item-intro__text">Клинические испытания</span>
+                                <span class="item-intro__text">Клинические <br> испытания</span>
                             </div>
-                            <div class="main__intro-item">
-                                <div class="item-intro__image">
+                            <div class="main__intro-item item-intro">
+                                <div class="item-intro__image" id="filter">
                                     @@include('img/svg/filter.svg')
                                 </div>
-                                <span class="item-intro__text">Физико-химические испытания</span>
+                                <span class="item-intro__text">Физико-химические <br> испытания</span>
                             </div>
                         </div>
                     </div>
@@ -53,73 +55,82 @@
             <section class="services">
                 <div class="services__container container">
                     <div class="services__body">
-                        <h2 class="services__title">Основные услуги “БИОХИМ” ИБХТН РУДН</h2>
+                        <h2 class="services__title section-title">Основные услуги “БИОХИМ” ИБХТН РУДН</h2>
                         <p class="services__subtitle">Специалисты испытательного лабораторного центра с помощью
-                            современного <br> испытательного оборудования изучают парфюмерно-косметическую продукцию.
+                            <mark class="services__subtitle-marked"> современного <br> испытательного оборудования
+                            </mark> изучают
+                            парфюмерно-косметическую продукцию.
                         </p>
-
                         <div class="services__grid">
                             <div class="services__grid-item item-services">
-                                <div class="item-services__ok">
-                                    @@include('img/svg/ok.svg')
-                                </div>
-                                <h3 class="item-services__title">Микробиологические испытания</h3>
-                                <p class="item-services__subtitle">Образцы проверяются на предмет заражения <br>
-                                    грибком кандида, золотистым стафилококком, <br>
-                                    плесневыми грибами, дрожжами и прочими <br>
-                                    микробиологическими патогенами.</p>
-                                <div class="item-services__request">
-                                    <button class="item-services__btn">ОСТАВИТЬ ЗАЯВКУ</button>
-                                    <div class="item-services__images">
-                                        @@include('img/svg/uglevod-2.svg')
+                                <div class="item-services__body">
+                                    <div class="item-services__ok">
+                                        @@include('img/svg/ok.svg')
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="services__grid-item item-services">
-                                <div class="item-services__ok">
-                                    @@include('img/svg/ok.svg')
-                                </div>
-                                <h3 class="item-services__title">Токсикологические испытания</h3>
-                                <p class="item-services__subtitle">Продукция исследуется на предмет и степень br
-                                    токсичности. Исследуется косметика и средства <br> индивидуальной и личной защиты.
-                                </p>
-                                <div class="item-services__request">
-                                    <button class="item-services__btn">ОСТАВИТЬ ЗАЯВКУ</button>
-                                    <div class="item-services__images">
-                                        @@include('img/svg/uglevod-2.svg')
+                                    <h3 class="item-services__title">Микробиологические испытания</h3>
+                                    <p class="item-services__subtitle">Образцы проверяются на предмет заражения <br>
+                                        грибком кандида, золотистым стафилококком, <br>
+                                        плесневыми грибами, дрожжами и прочими <br>
+                                        микробиологическими патогенами.</p>
+                                    <div class="item-services__request">
+                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <div class="item-services__images" id="uglevod-1">
+                                            <img src="img/uglevod-1.png" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="services__grid-item item-services">
-                                <div class="item-services__ok">
-                                    @@include('img/svg/ok.svg')
-                                </div>
-                                <h3 class="item-services__title">Клинические испытания</h3>
-                                <p class="item-services__subtitle">Испытания проводятся под руководством <br>
-                                    сертифицированных дерматологов, которые дают <br> заключение о раздражающем и
-                                    сенсибилизирующем <br> воздействии косметики и парфюмерии.
-                                </p>
-                                <div class="item-services__request">
-                                    <button class="item-services__btn">ОСТАВИТЬ ЗАЯВКУ</button>
-                                    <div class="item-services__images">
-                                        @@include('img/svg/uglevod-3.svg')
+                                <div class="item-services__body">
+                                    <div class="item-services__ok">
+                                        @@include('img/svg/ok.svg')
+                                    </div>
+                                    <h3 class="item-services__title">Токсикологические испытания</h3>
+                                    <p class="item-services__subtitle">Продукция исследуется на предмет и степень br
+                                        токсичности. Исследуется косметика и средства <br> индивидуальной и личной
+                                        защиты.
+                                    </p>
+                                    <div class="item-services__request">
+                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <div class="item-services__images" id="uglevod-2">
+                                            <img src="img/uglevod-2.png" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="services__grid-item item-services">
-                                <div class="item-services__ok">
-                                    @@include('img/svg/ok.svg')
+                                <div class="item-services__body">
+                                    <div class="item-services__ok">
+                                        @@include('img/svg/ok.svg')
+                                    </div>
+                                    <h3 class="item-services__title">Клинические испытания</h3>
+                                    <p class="item-services__subtitle">Испытания проводятся под руководством <br>
+                                        сертифицированных дерматологов, которые дают <br> заключение о раздражающем и
+                                        сенсибилизирующем <br> воздействии косметики и парфюмерии.
+                                    </p>
+                                    <div class="item-services__request">
+                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <div class="item-services__images" id="uglevod-3">
+                                            <img src="img/uglevod-3.png" alt="">
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 class="item-services__title"> Физико-химические испытания</h3>
-                                <p class="item-services__subtitle"> Необходимая продукция проверяется на предмет <br>
-                                    соответствия требованиями ГОСТов;
-
-                                </p>
-                                <div class="item-services__request">
-                                    <button class="item-services__btn">ОСТАВИТЬ ЗАЯВКУ</button>
-                                    <div class="item-services__images">
-                                        @@include('img/svg/uglevod-2.svg')
+                            </div>
+                            <div class="services__grid-item item-services">
+                                <div class="item-services__body">
+                                    <div class="item-services__ok">
+                                        @@include('img/svg/ok.svg')
+                                    </div>
+                                    <h3 class="item-services__title"> Физико-химические испытания</h3>
+                                    <p class="item-services__subtitle"> Необходимая продукция проверяется на предмет
+                                        <br>
+                                        соответствия требованиями ГОСТов;
+                                    </p>
+                                    <div class="item-services__request">
+                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <div class="item-services__images" id="uglevod-4">
+                                            <img src="img/uglevod-4.png" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -127,48 +138,49 @@
                     </div>
                 </div>
             </section>
-            <section class="step">
-                <div class="step__container container">
-                    <div class="step__body">
-                        <h2 class="step__title">Порядок оказания услуг:</h2>
-                        <p class="step__subtitle">Срок оказания услуги зависит от программы исследований.
+            <section class="steps">
+                <div class="steps__container container">
+                    <div class="steps__body">
+                        <h2 class="steps__title section-title">Порядок оказания услуг:</h2>
+                        <p class="steps__subtitle">Срок оказания услуги зависит от программы исследований.
                         </p>
-                        <div class="step__flex">
-                            <div class="step__flex-item item-flex">
-                                <span class="item-flex__number">1</span>
-                                <span class="item-flex__text">Заполните заявку</span>
-                                <p class="item-flex__description"></p>
+                        <div class="steps__grid">
+                            <div class="steps__grid-item item-step">
+                                <span class="item-step__number">1</span>
+                                <span class="item-step__text">Заполните заявку</span>
+                                <p class="item-step__description"></p>
                             </div>
-                            <div class="step__flex-item item-flex">
-                                <span class="item-flex__number">2</span>
-                                <span class="item-flex__text"> Получите ответ
+                            <div class="steps__grid-item item-step">
+                                <span class="item-step__number">2</span>
+                                <span class="item-step__text"> Получите ответ <br>
                                     на запрос</span>
-                                <p class="item-flex__description"></p>
+                                <p class="item-step__description"></p>
                             </div>
-                            <div class="step__flex-item item-flex">
-                                <span class="item-flex__number">3</span>
-                                <span class="item-flex__text"> Доставьте продукцию
+                            <div class="steps__grid-item item-step">
+                                <span class="item-step__number">3</span>
+                                <span class="item-step__text"> Доставьте продукцию <br>
                                     на испытание</span>
-                                <p class="item-flex__description">(при себе следует иметь распечатанную заявку
+                                <p class="item-step__description">(при себе следует иметь <br> распечатанную заявку <br>
                                     на проведение исследования)</p>
                             </div>
-                            <div class="step__flex-item item-flex">
-                                <span class="item-flex__number">4</span>
-                                <span class="item-flex__text"> Заключите договор
-                                    с испытательным
+                            <div class="steps__grid-item item-step">
+                                <span class="item-step__number">4</span>
+                                <span class="item-step__text"> Заключите договор <br>
+                                    с испытательным <br>
                                     лабораторным центром</span>
-                                <p class="item-flex__description"></p>
+                                <p class="item-step__description"></p>
                             </div>
-                            <div class="step__flex-item item-flex">
-                                <span class="item-flex__number">5</span>
-                                <span class="item-flex__text"> Получите счет
+                            <div class="steps__grid-item item-step">
+                                <span class="item-step__number">5</span>
+                                <span class="item-step__text"> Получите счет <br>
                                     и внесите оплату</span>
+                                <p class="item-step__description"></p>
                             </div>
-                            <div class="step__flex-item item-flex">
-                                <span class="item-flex__number">6</span>
-                                <span class="item-flex__text"> Получите на руки
+                            <div class="steps__grid-item item-step">
+                                <span class="item-step__number">6</span>
+                                <span class="item-step__text"> Получите на руки <br>
                                     протокол испытаний</span>
-                                <p class="item-flex__description"></p>
+                                <p class="item-step__description"></p>
                             </div>
                         </div>
                     </div>
@@ -177,63 +189,94 @@
             <section class="complaint">
                 <div class="complaint__container container">
                     <div class="complaint__body">
-                        <h3 class="complaint__title">Как подать жалобу (претензию):</h3>
-                        <ol class="complaint__form">
-                            <li class="complaint__text"> Чтобы опротестовать результаты исследований или решить спорный
-                                вопрос, подайте жалобу письменно и заверьте ее подписью.</li>
-                            <li class="complaint__text">В “шапке” жалобы укажите свои ФИО. Далее кратко изложите суть
-                                жалобы (претензии). Укажите свой адрес (почтовы, e-mail).</li>
-                            <li class="complaint__text">Анонимной жалоба быть не может: в противном случае она не будет
-                                рассмотрена.</li>
-                            <li class="complaint__text">Поступившая жалоба регистрируется, после чего заявитель получает
-                                уведомление
-                                о ее получении. В среднем жалобы рассматриваются в течение 1 месяца с момента ее
-                                поступления и регистрации. Если для принятия решения возникает необходимость в
-                                проведении дополнительных действий, срок может быть увеличен: заявитель при этом
-                                получает соответствующее уведомление.</li>
-                            <li class="complaint__text">Жалобы рассматриваются по принципу конфиденциальности,
-                                беспристрастности, справедливости и объективности. Если жалобу не признают обоснованной,
-                                она отклоняется. Если заявитель не направляет возражение по жалобе, то решение
-                                по ней считается принятым.</li>
-                            <li class="complaint__text">Если заявитель не согласен с решением по жалобе, он может подать
-                                апелляцию,
-                                или оспорить его посредством обращения в вышестоящие инстанции. </li>
-                        </ol>
+                        <h2 class="complaint__title section-title">Как подать жалобу (претензию):</h2>
+                        <div class="complaint__content">
+                            <div class="complaint__content-before">
+                                @@include('img/svg/complaint__content-bcg.svg')
+                            </div>
+                            <ol class="complaint__content-body">
+                                <li class="complaint__text"> Чтобы опротестовать результаты исследований или решить
+                                    спорный
+                                    вопрос, <mark class="complaint__text-marked"> подайте жалобу письменно и заверьте ее
+                                        подписью.</mark> </li>
+                                <li class="complaint__text">В “шапке” жалобы укажите свои ФИО. Далее кратко изложите
+                                    суть
+                                    жалобы (претензии). <mark class="complaint__text-marked">Укажите свой адрес
+                                        (почтовы, e-mail).</mark> </li>
+                                <li class="complaint__text"><span class="complaint__text-marked">Анонимной жалоба быть
+                                        не может:</span> в противном случае она не
+                                    будет
+                                    рассмотрена.</li>
+                                <li class="complaint__text">Поступившая жалоба регистрируется, после чего заявитель
+                                    получает
+                                    уведомление
+                                    о ее получении. <mark class="complaint__text-marked">В среднем жалобы
+                                        рассматриваются в течение 1 месяца</mark> с момента ее
+                                    поступления и регистрации. Если для принятия решения возникает необходимость в
+                                    проведении дополнительных действий, срок может быть увеличен: заявитель при этом
+                                    получает соответствующее уведомление.</li>
+                                <li class="complaint__text"><mark class="complaint__text-marked">Жалобы рассматриваются
+                                        по принципу конфиденциальности,
+                                        беспристрастности, справедливости и объективности.</mark> Если жалобу не
+                                    признают
+                                    обоснованной,
+                                    она отклоняется. Если заявитель не направляет возражение по жалобе, то решение
+                                    по ней считается принятым.</li>
+                                <li class="complaint__text">Если заявитель не согласен с решением по жалобе, он <mark
+                                        class="complaint__text-marked"> может
+                                        подать
+                                        апелляцию,</mark>
+                                    или оспорить его посредством обращения в вышестоящие инстанции. </li>
+                            </ol>
+                            <div class="complaint__content-after">
+                                @@include('img/svg/complaint__content-bcg.svg')
+                            </div>
+                        </div>
                         <div class="complaint__image">
-                            <img src="" alt="">
+                            <img src="img/pen.png" alt="">
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="contacts__us">
-                <div class="contacts__us-bcg">
-                    <img src="" alt="">
+            <section class="contact__us">
+                <div class="contact__us-bcg">
+                    <img src="img/bottom-bcg.png" alt="">
                 </div>
-                <div class="contacts__us-container">
-                    <div class="contacts__us-body">
-                        <h3 class="contacts__us-title">Задайте нам вопрос!</h3>
-                        <form action="#" class="contacts__form">
-                            <div class="contacts__form-body">
-                                <h5 class="contacts__form-titl">Если у Вас есть вопросы по услугам нашей лаборатории,
-                                    оставьте заявку ниже. Специалист свяжется с вами в ближайшее время!</h5>
-                                <div class="contacts__form-inputs">
-                                    <input type="text" placeholder="Ваше имя" class="contacts__form-name" name="name">
-                                    <input type="text" placeholder="+ 7 (...)- ...-..- .." class="contacts__form-number"
+                <div class="contact__us-container container">
+                    <div class="contact__us-body">
+                        <h2 class="contact__us-title section-title">Задайте нам вопрос!</h2>
+                        <form action="#" class="contact__form">
+                            <div class="contact__form-body">
+                                <h5 class="contact__form-title">Если у Вас есть вопросы по услугам нашей лаборатории,
+                                    оставьте <br> заявку ниже. Специалист свяжется с вами в ближайшее время!</h5>
+                                <div class="contact__form-inputs">
+                                    <input type="text" placeholder="Ваше имя" class="contact__form-name" name="name">
+                                    <input type="text" placeholder="+ 7 (...)- ...-..- .." class="contact__form-number"
                                         name="phone">
                                     <input type="text" placeholder="E-mail" class="contacts__form-mail" name="email">
                                 </div>
-                                <textarea placeholder="Ваш вопрос" class="contacts__form-question" name="message"
+                                <textarea placeholder="Ваш вопрос" class="contact__form-message" name="message"
                                     cols="30" rows="6"></textarea>
-                                <button type="submit" class="contacts__form-btn">задать вопрос</button>
-                                <div class="contacts__form-confidence">
+                                <button type="submit" class="contact__form-btn blue-btn">задать вопрос</button>
+                                <div class="contact__form-confidence">
                                     <input type="checkbox" id="agreement" name="scales" unchecked>
-                                    <label for="agreement">Я согласен с условиями обработки данных</label>
+                                    <label for="agreement" id="agreement-label">Я согласен с условиями обработки
+                                        данных</label>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="contacts__us-image">
-                        <img src="" alt="">
+                </div>
+                <div class="contact__us-bottom bottom-contact">
+                    <div class="bottom-contact__body container">
+                        <div class="bottom-contact__image ">
+                            <div class="bottom-contact__image-filters">
+                                <img src="img/filters.png" alt="">
+                            </div>
+                            <div class="bottom-contact__image-colb">
+                                <img src="img/colba.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -244,7 +287,7 @@
         @@include('html/footer.html')
     </div>
     <!-- <script src="files/swiper.min.js"></script> -->
-    <!-- <script src="js/app.min.js"></script> -->
+    <script src="js/app.min.js"></script>
 </body>
 
 </html>
