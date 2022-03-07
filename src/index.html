@@ -2,6 +2,7 @@
 
 <body>
     <div class="wrapper">
+        @@include('html/popup.html')
         @@include('html/header.html')
         <main class="page">
             <section class="main">
@@ -19,7 +20,7 @@
                             <div class="main__image">
                                 <img src="img/top-girl.png" alt="">
                             </div>
-                            <button class="main__button blue-btn">Получить консультацию</button>
+                            <button class="main__button blue-btn _open-popup">Получить консультацию</button>
                         </div>
                     </div>
                     <div class="main__intro">
@@ -73,7 +74,7 @@
                                         плесневыми грибами, дрожжами и прочими <br>
                                         микробиологическими патогенами.</p>
                                     <div class="item-services__request">
-                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <button class="item-services__btn blue-btn _open-popup">ОСТАВИТЬ ЗАЯВКУ</button>
                                         <div class="item-services__images" id="uglevod-1">
                                             <img src="img/uglevod-1.png" alt="">
                                         </div>
@@ -91,7 +92,7 @@
                                         защиты.
                                     </p>
                                     <div class="item-services__request">
-                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <button class="item-services__btn blue-btn _open-popup">ОСТАВИТЬ ЗАЯВКУ</button>
                                         <div class="item-services__images" id="uglevod-2">
                                             <img src="img/uglevod-2.png" alt="">
                                         </div>
@@ -109,7 +110,7 @@
                                         сенсибилизирующем <br> воздействии косметики и парфюмерии.
                                     </p>
                                     <div class="item-services__request">
-                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <button class="item-services__btn blue-btn _open-popup">ОСТАВИТЬ ЗАЯВКУ</button>
                                         <div class="item-services__images" id="uglevod-3">
                                             <img src="img/uglevod-3.png" alt="">
                                         </div>
@@ -127,7 +128,7 @@
                                         соответствия требованиями ГОСТов;
                                     </p>
                                     <div class="item-services__request">
-                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <button class="item-services__btn blue-btn _open-popup">ОСТАВИТЬ ЗАЯВКУ</button>
                                         <div class="item-services__images" id="uglevod-4">
                                             <img src="img/uglevod-4.png" alt="">
                                         </div>
@@ -145,42 +146,57 @@
                         <p class="steps__subtitle">Срок оказания услуги зависит от программы исследований.
                         </p>
                         <div class="steps__grid">
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-dashedline dashedline-steps__top">
+                                @@include('img/svg/steps-dashed-line.svg')
+                            </div>
+                            <div class="steps__grid-item item-step" id="item-step-1">
                                 <span class="item-step__number">1</span>
                                 <span class="item-step__text">Заполните заявку</span>
                                 <p class="item-step__description"></p>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-2">
                                 <span class="item-step__number">2</span>
                                 <span class="item-step__text"> Получите ответ <br>
                                     на запрос</span>
                                 <p class="item-step__description"></p>
+                                <div class="item-step__dashedline">
+                                    @@include('img/svg/steps-dashed-line-small.svg')
+                                </div>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-3">
                                 <span class="item-step__number">3</span>
                                 <span class="item-step__text"> Доставьте продукцию <br>
                                     на испытание</span>
                                 <p class="item-step__description">(при себе следует иметь <br> распечатанную заявку <br>
                                     на проведение исследования)</p>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-4">
                                 <span class="item-step__number">4</span>
                                 <span class="item-step__text"> Заключите договор <br>
                                     с испытательным <br>
                                     лабораторным центром</span>
                                 <p class="item-step__description"></p>
+                                <div class="item-step__dashedline">
+                                    @@include('img/svg/steps-dashed-line-small.svg')
+                                </div>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-5">
                                 <span class="item-step__number">5</span>
                                 <span class="item-step__text"> Получите счет <br>
                                     и внесите оплату</span>
                                 <p class="item-step__description"></p>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-6">
                                 <span class="item-step__number">6</span>
                                 <span class="item-step__text"> Получите на руки <br>
                                     протокол испытаний</span>
                                 <p class="item-step__description"></p>
+                                <div class="item-step__dashedline">
+                                    @@include('img/svg/steps-dashed-line-small.svg')
+                                </div>
+                            </div>
+                            <div class="steps__grid-dashedline dashedline-steps__bottom">
+                                @@include('img/svg/steps-dashed-line.svg')
                             </div>
                         </div>
                     </div>
@@ -250,19 +266,24 @@
                                 <h5 class="contact__form-title">Если у Вас есть вопросы по услугам нашей лаборатории,
                                     оставьте <br> заявку ниже. Специалист свяжется с вами в ближайшее время!</h5>
                                 <div class="contact__form-inputs">
-                                    <input type="text" placeholder="Ваше имя" class="contact__form-name" name="name">
-                                    <input type="text" placeholder="+ 7 (...)- ...-..- .." class="contact__form-number"
-                                        name="phone">
-                                    <input type="text" placeholder="E-mail" class="contacts__form-mail" name="email">
+                                    <input type="text" placeholder="Ваше имя" class="contact__form-name input-name _req"
+                                        name="name">
+                                    <input type="text" placeholder="+ 7 (...)- ...-..- .."
+                                        class="contact__form-phone _req" name="phone">
+                                    <input type="email" placeholder="E-mail" class="contacts__form-mail _req"
+                                        name="email">
                                 </div>
-                                <textarea placeholder="Ваш вопрос" class="contact__form-message" name="message"
+                                <textarea placeholder="Ваш вопрос" class="contact__form-message _req" name="message"
                                     cols="30" rows="6"></textarea>
                                 <button type="submit" class="contact__form-btn blue-btn">задать вопрос</button>
-                                <div class="contact__form-confidence">
+                                <div class="contact__form-confidence" id="confidence-dasktop">
                                     <input type="checkbox" id="agreement" name="scales" unchecked>
                                     <label for="agreement" id="agreement-label">Я согласен с условиями обработки
                                         данных</label>
                                 </div>
+                                <label for="agreement-2" class="contact__form-confidence" id="confidence-mobile">Нажимая
+                                    на кнопку, Вы даете согласие <br>
+                                    на обработку персональных данных</label>
                             </div>
                         </form>
                     </div>
@@ -281,12 +302,42 @@
                 </div>
             </section>
             <section class="location">
-                <img src="" alt="">
+                <div id="map" class="location__map"> </div>
+                <div class="balloon">
+                    <div class="balloon__body">
+                        <h6 class="balloon__title">Наши контакты:</h6>
+                        <a href="" class="balloon__item">
+                            <img src="img/svg/phone-balloon.svg">
+                            <span class="balloon__item-text"><mark class="balloon__item-text-marked">Телефон:</mark>
+                                8 (495) 787-38-03 </span>
+                        </a>
+                        <a href="" class="balloon__item">
+                            <img src="img/svg/mail-balloon.svg">
+                            <span class="balloon__item-text"> <mark class="balloon__item-text-marked">Почта: </mark>
+                                biochemlab@rudn.ru </span>
+                        </a>
+                        <a href="" class="balloon__item">
+                            <img src="img/svg/location-balloon.svg">
+                            <span class="balloon__item-text"> <mark class="balloon__item-text-marked">Адрес:</mark>
+                                Россия, г.Москва, <br> ул.Миклухо-Маклая, д.10, к.2 </span>
+                        </a>
+                        <span class="balloon__item">
+                            <img src="img/svg/time-balloon.svg">
+                            <span class="balloon__item-text"> <mark class="balloon__item-text-marked">Время
+                                    работы:</mark> Пн-Пт, 9:00-18:00 </span>
+                        </span>
+                    </div>
+                </div>
             </section>
         </main>
         @@include('html/footer.html')
     </div>
-    <!-- <script src="files/swiper.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js?_v=20220205140131"
+        type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js?_v=20220205140131"
+        type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU"></script>
     <script src="js/app.min.js"></script>
 </body>
 

@@ -6,17 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аромастилист</title>
-    <!-- <link rel="stylesheet" href="files/swiper.min.css"> -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <!-- <link rel="stylesheet" href="files/swiper.min.css?_v=20220308002127"> -->
+    <link rel="stylesheet" href="css/style.min.css?_v=20220308002127">
 </head>
 
 <body>
     <div class="wrapper">
+        <div class="popup">
+    <div class="popup__body">
+        <span class="popup__close">
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5625 16.5625L33.4375 33.4375M33.4375 16.5625L16.5625 33.4375L33.4375 16.5625Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25 48.4375C37.9442 48.4375 48.4375 37.9442 48.4375 25C48.4375 12.0558 37.9442 1.5625 25 1.5625C12.0558 1.5625 1.5625 12.0558 1.5625 25C1.5625 37.9442 12.0558 48.4375 25 48.4375Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        </span>
+        <form action="#" class="popup__form">
+            <div class="popup__form-body">
+                <h6 class="popup__form-title">Заполните форму</h6>
+                <p class="popup__form-subtitle">И получите консультацию нашего специалиста</p>
+                <input type="text" placeholder="Ваше имя" class="popup__form-name input-name _popup-req" name="popup_name">
+                <input type="text" placeholder="Ваш телефон" class="popup__form-phone _popup-req" name="popup_phone">
+                <div class="popup__form-confidence">
+                    <input type="checkbox" id="agreement" name="scales" unchecked>
+                    <label for="agreement" id="agreement-label">Я согласен с условиями обработки данных</label>
+                </div>
+                <button type="submit" class="popup__form-btn blue-btn">отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
         <header class="header">
     <div class="header__container container">
         <div class="header__body">
             <a href="/" class="header__logo">
-                <img src="img/logo.png" alt="">
+                <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
             </a>
             <div class="header__main">
                 <div class="header__contacts">
@@ -49,7 +73,7 @@
                 <nav class="header__menu">
                     <div class="header__menu-top">
                         <a  class="header__menu-top-logo" href="/">
-                            <img src="../img/logo.png" alt="">
+                            <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
                         </a>
                         <div class="header__menu-top-close">
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,7 +110,7 @@
         <main class="page">
             <section class="main">
                 <div class="main__bcg">
-                    <img src="img/top-bcg.png" alt="">
+                    <picture><source srcset="img/top-bcg.webp" type="image/webp"><img src="img/top-bcg.png" alt=""></picture>
                 </div>
                 <div class="main__container container">
                     <div class="main__body">
@@ -97,9 +121,9 @@
                                     испытания.</mark>
                             </h1>
                             <div class="main__image">
-                                <img src="img/top-girl.png" alt="">
+                                <picture><source srcset="img/top-girl.webp" type="image/webp"><img src="img/top-girl.png" alt=""></picture>
                             </div>
-                            <button class="main__button blue-btn">Получить консультацию</button>
+                            <button class="main__button blue-btn _open-popup">Получить консультацию</button>
                         </div>
                     </div>
                     <div class="main__intro">
@@ -175,9 +199,9 @@
                                         плесневыми грибами, дрожжами и прочими <br>
                                         микробиологическими патогенами.</p>
                                     <div class="item-services__request">
-                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <button class="item-services__btn blue-btn _open-popup">ОСТАВИТЬ ЗАЯВКУ</button>
                                         <div class="item-services__images" id="uglevod-1">
-                                            <img src="img/uglevod-1.png" alt="">
+                                            <picture><source srcset="img/uglevod-1.webp" type="image/webp"><img src="img/uglevod-1.png" alt=""></picture>
                                         </div>
                                     </div>
                                 </div>
@@ -196,9 +220,9 @@
                                         защиты.
                                     </p>
                                     <div class="item-services__request">
-                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <button class="item-services__btn blue-btn _open-popup">ОСТАВИТЬ ЗАЯВКУ</button>
                                         <div class="item-services__images" id="uglevod-2">
-                                            <img src="img/uglevod-2.png" alt="">
+                                            <picture><source srcset="img/uglevod-2.webp" type="image/webp"><img src="img/uglevod-2.png" alt=""></picture>
                                         </div>
                                     </div>
                                 </div>
@@ -217,9 +241,9 @@
                                         сенсибилизирующем <br> воздействии косметики и парфюмерии.
                                     </p>
                                     <div class="item-services__request">
-                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <button class="item-services__btn blue-btn _open-popup">ОСТАВИТЬ ЗАЯВКУ</button>
                                         <div class="item-services__images" id="uglevod-3">
-                                            <img src="img/uglevod-3.png" alt="">
+                                            <picture><source srcset="img/uglevod-3.webp" type="image/webp"><img src="img/uglevod-3.png" alt=""></picture>
                                         </div>
                                     </div>
                                 </div>
@@ -238,9 +262,9 @@
                                         соответствия требованиями ГОСТов;
                                     </p>
                                     <div class="item-services__request">
-                                        <button class="item-services__btn blue-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                        <button class="item-services__btn blue-btn _open-popup">ОСТАВИТЬ ЗАЯВКУ</button>
                                         <div class="item-services__images" id="uglevod-4">
-                                            <img src="img/uglevod-4.png" alt="">
+                                            <picture><source srcset="img/uglevod-4.webp" type="image/webp"><img src="img/uglevod-4.png" alt=""></picture>
                                         </div>
                                     </div>
                                 </div>
@@ -256,42 +280,74 @@
                         <p class="steps__subtitle">Срок оказания услуги зависит от программы исследований.
                         </p>
                         <div class="steps__grid">
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-dashedline dashedline-steps__top">
+                                <svg width="814" height="110" viewBox="0 0 814 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M813 50C813 50 694.356 0.642506 612.055 1.00195C531.202 1.35508 415 50 415 50" stroke="black" stroke-dasharray="15 15"/>
+<path d="M1 60C1 60 119.644 109.357 201.945 108.998C282.798 108.645 399 60 399 60" stroke="black" stroke-dasharray="15 15"/>
+</svg>
+
+                            </div>
+                            <div class="steps__grid-item item-step" id="item-step-1">
                                 <span class="item-step__number">1</span>
                                 <span class="item-step__text">Заполните заявку</span>
                                 <p class="item-step__description"></p>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-2">
                                 <span class="item-step__number">2</span>
                                 <span class="item-step__text"> Получите ответ <br>
                                     на запрос</span>
                                 <p class="item-step__description"></p>
+                                <div class="item-step__dashedline">
+                                    <svg width="400" height="51" viewBox="0 0 400 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 50C1 50 119.644 0.642506 201.945 1.00195C282.798 1.35508 399 50 399 50" stroke="black" stroke-dasharray="15 15"/>
+</svg>
+
+                                </div>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-3">
                                 <span class="item-step__number">3</span>
                                 <span class="item-step__text"> Доставьте продукцию <br>
                                     на испытание</span>
                                 <p class="item-step__description">(при себе следует иметь <br> распечатанную заявку <br>
                                     на проведение исследования)</p>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-4">
                                 <span class="item-step__number">4</span>
                                 <span class="item-step__text"> Заключите договор <br>
                                     с испытательным <br>
                                     лабораторным центром</span>
                                 <p class="item-step__description"></p>
+                                <div class="item-step__dashedline">
+                                    <svg width="400" height="51" viewBox="0 0 400 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 50C1 50 119.644 0.642506 201.945 1.00195C282.798 1.35508 399 50 399 50" stroke="black" stroke-dasharray="15 15"/>
+</svg>
+
+                                </div>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-5">
                                 <span class="item-step__number">5</span>
                                 <span class="item-step__text"> Получите счет <br>
                                     и внесите оплату</span>
                                 <p class="item-step__description"></p>
                             </div>
-                            <div class="steps__grid-item item-step">
+                            <div class="steps__grid-item item-step" id="item-step-6">
                                 <span class="item-step__number">6</span>
                                 <span class="item-step__text"> Получите на руки <br>
                                     протокол испытаний</span>
                                 <p class="item-step__description"></p>
+                                <div class="item-step__dashedline">
+                                    <svg width="400" height="51" viewBox="0 0 400 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 50C1 50 119.644 0.642506 201.945 1.00195C282.798 1.35508 399 50 399 50" stroke="black" stroke-dasharray="15 15"/>
+</svg>
+
+                                </div>
+                            </div>
+                            <div class="steps__grid-dashedline dashedline-steps__bottom">
+                                <svg width="814" height="110" viewBox="0 0 814 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M813 50C813 50 694.356 0.642506 612.055 1.00195C531.202 1.35508 415 50 415 50" stroke="black" stroke-dasharray="15 15"/>
+<path d="M1 60C1 60 119.644 109.357 201.945 108.998C282.798 108.645 399 60 399 60" stroke="black" stroke-dasharray="15 15"/>
+</svg>
+
                             </div>
                         </div>
                     </div>
@@ -364,14 +420,14 @@
                             </div>
                         </div>
                         <div class="complaint__image">
-                            <img src="img/pen.png" alt="">
+                            <picture><source srcset="img/pen.webp" type="image/webp"><img src="img/pen.png" alt=""></picture>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="contact__us">
                 <div class="contact__us-bcg">
-                    <img src="img/bottom-bcg.png" alt="">
+                    <picture><source srcset="img/bottom-bcg.webp" type="image/webp"><img src="img/bottom-bcg.png" alt=""></picture>
                 </div>
                 <div class="contact__us-container container">
                     <div class="contact__us-body">
@@ -381,19 +437,24 @@
                                 <h5 class="contact__form-title">Если у Вас есть вопросы по услугам нашей лаборатории,
                                     оставьте <br> заявку ниже. Специалист свяжется с вами в ближайшее время!</h5>
                                 <div class="contact__form-inputs">
-                                    <input type="text" placeholder="Ваше имя" class="contact__form-name" name="name">
-                                    <input type="text" placeholder="+ 7 (...)- ...-..- .." class="contact__form-number"
-                                        name="phone">
-                                    <input type="text" placeholder="E-mail" class="contacts__form-mail" name="email">
+                                    <input type="text" placeholder="Ваше имя" class="contact__form-name input-name _req"
+                                        name="name">
+                                    <input type="text" placeholder="+ 7 (...)- ...-..- .."
+                                        class="contact__form-phone _req" name="phone">
+                                    <input type="email" placeholder="E-mail" class="contacts__form-mail _req"
+                                        name="email">
                                 </div>
-                                <textarea placeholder="Ваш вопрос" class="contact__form-message" name="message"
+                                <textarea placeholder="Ваш вопрос" class="contact__form-message _req" name="message"
                                     cols="30" rows="6"></textarea>
                                 <button type="submit" class="contact__form-btn blue-btn">задать вопрос</button>
-                                <div class="contact__form-confidence">
+                                <div class="contact__form-confidence" id="confidence-dasktop">
                                     <input type="checkbox" id="agreement" name="scales" unchecked>
                                     <label for="agreement" id="agreement-label">Я согласен с условиями обработки
                                         данных</label>
                                 </div>
+                                <label for="agreement-2" class="contact__form-confidence" id="confidence-mobile">Нажимая
+                                    на кнопку, Вы даете согласие <br>
+                                    на обработку персональных данных</label>
                             </div>
                         </form>
                     </div>
@@ -402,17 +463,42 @@
                     <div class="bottom-contact__body container">
                         <div class="bottom-contact__image ">
                             <div class="bottom-contact__image-filters">
-                                <img src="img/filters.png" alt="">
+                                <picture><source srcset="img/filters.webp" type="image/webp"><img src="img/filters.png" alt=""></picture>
                             </div>
                             <div class="bottom-contact__image-colb">
-                                <img src="img/colba.png" alt="">
+                                <picture><source srcset="img/colba.webp" type="image/webp"><img src="img/colba.png" alt=""></picture>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="location">
-                <img src="" alt="">
+                <div id="map" class="location__map"> </div>
+                <div class="balloon">
+                    <div class="balloon__body">
+                        <h6 class="balloon__title">Наши контакты:</h6>
+                        <a href="" class="balloon__item">
+                            <img src="img/svg/phone-balloon.svg">
+                            <span class="balloon__item-text"><mark class="balloon__item-text-marked">Телефон:</mark>
+                                8 (495) 787-38-03 </span>
+                        </a>
+                        <a href="" class="balloon__item">
+                            <img src="img/svg/mail-balloon.svg">
+                            <span class="balloon__item-text"> <mark class="balloon__item-text-marked">Почта: </mark>
+                                biochemlab@rudn.ru </span>
+                        </a>
+                        <a href="" class="balloon__item">
+                            <img src="img/svg/location-balloon.svg">
+                            <span class="balloon__item-text"> <mark class="balloon__item-text-marked">Адрес:</mark>
+                                Россия, г.Москва, <br> ул.Миклухо-Маклая, д.10, к.2 </span>
+                        </a>
+                        <span class="balloon__item">
+                            <img src="img/svg/time-balloon.svg">
+                            <span class="balloon__item-text"> <mark class="balloon__item-text-marked">Время
+                                    работы:</mark> Пн-Пт, 9:00-18:00 </span>
+                        </span>
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="footer">
@@ -420,7 +506,7 @@
         <div class="footer__body">
             <div class="footer__main">
                 <a href="/" class="footer__logo">
-                    <img src="img/logo.png" alt="">
+                    <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt=""></picture>
                 </a>
                 <nav class="footer__menu">
                     <ul class="footer__menu-body ">
@@ -468,8 +554,13 @@
     </div>
 </footer>
     </div>
-    <!-- <script src="files/swiper.min.js"></script> -->
-    <script src="js/app.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js?_v=20220205140131"
+        type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js?_v=20220205140131"
+        type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20220308002127"></script>
+    <script src="js/app.min.js?_v=20220308002127"></script>
 </body>
 
 </html>

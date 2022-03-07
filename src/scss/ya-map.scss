@@ -1,0 +1,71 @@
+[class*="copyrights-pane"] {
+	display: none !important;
+}
+
+.balloon {
+    position: absolute;
+    right: 262px;
+    @include adaptive-value("right", 262, 20, 1);
+    @include adaptive-value("top", 13, 50, 1);
+
+    // .balloon__container
+
+    // .balloon__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include adaptive-value("padding-top", 65, 30, 1);
+        @include adaptive-value("padding-bottom", 43, 23, 1);
+        @include adaptive-value("padding-left", 69, 30, 1);
+        @include adaptive-value("padding-right", 40,30, 1);
+        width: 100%;
+        @include adaptive-value("border-radius", 20, 10, 1);
+        background: #ffffff;
+        @include adaptive-value("width", 540, 320, 1);
+    }
+
+    // .balloon__title
+
+    &__title {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 120%;
+        text-align: center;
+        color: #000000;
+        @include adaptive-value("margin-bottom", 35, 19, 1);
+        @include adaptive-value("font-size", 35, 18, 1);
+    }
+
+    // .balloon__item
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include adaptive-value("margin-bottom", 26, 15, 1);
+
+        img {
+            @include adaptive-value("margin-right", 20, 5, 1);
+        }
+        // .balloon__item-text
+
+        &-text {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            @include adaptive-value("font-size", 25, 18, 1);
+            line-height: 115%;
+            text-align: center;
+            color: #000000;
+            text-align: left;
+            // .balloon__item-text-marked
+
+            &-marked {
+                font-weight: 700;
+            }
+        }
+    }
+}
