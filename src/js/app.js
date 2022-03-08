@@ -8,11 +8,56 @@ document.addEventListener('click', function (e) {
         document.querySelector('.header__menu').classList.remove('_active');
     }
 
+    if (targetEl.classList.contains('balloon__close')) {
+        document.querySelector('.balloon__close').closest('.balloon').classList.toggle('_hidden');
+    }
+
     if (targetEl.classList.contains('_open-popup')) {
         popupOpen(document.querySelector('.popup'));
     }
     if (targetEl.classList.contains('popup__close')) {
         popupClose(targetEl.closest('.popup'));
+    }
+
+    let arr = { block: "start", behavior: "smooth" };
+
+    if (targetEl.classList.contains('_scrollto-main')) {
+        prevDev(e);
+        document.querySelector('.main').scrollIntoView(arr);
+        hideMenu();
+    }
+
+    if (targetEl.classList.contains('_scrollto-contactus')) {
+        prevDev(e);
+        document.querySelector('.contact__us').scrollIntoView(arr);
+        hideMenu();
+    }
+
+    if (targetEl.classList.contains('_scrollto-services')) {
+        prevDev(e);
+        document.querySelector('.services').scrollIntoView(arr);
+        hideMenu();
+    }
+
+    if (targetEl.classList.contains('_scrollto-steps')) {
+        prevDev(e);
+        document.querySelector('.steps').scrollIntoView(arr);
+        hideMenu();
+    }
+
+    if (targetEl.classList.contains('_scrollto-location')) {
+        prevDev(e);
+        document.querySelector('.location').scrollIntoView(arr);
+        hideMenu();
+    }
+
+    function prevDev(e) {
+        e.preventDefault();
+    }
+    function hideMenu() {
+        if (document.querySelector('.header__menu').classList.contains('_active')) {
+            document.querySelector('.header__menu').classList.remove('_active');
+        }
     }
 });
 
@@ -48,54 +93,29 @@ function popupClose(popup) {
     }
 }
 
-if (document.querySelector('.popup')) {
-    let chooseMessenger = document.querySelector('.popup');
-    let inputs = chooseMessenger.querySelectorAll('input');
-}
+// if (document.querySelector('.popup')) {
+//     let chooseMessenger = document.querySelector('.popup');
+//     let inputs = chooseMessenger.querySelectorAll('input');
+// }
 
-// фиксированные элементы 
 const lockPadding = document.querySelectorAll('.popup');
 
-// контролирует состояние попапа (открытый, закрытый)
 let unlock = true;
 
-// время анимации по клике на попап
-const timeout = 400;
+const timeout = 300;
 
-// lock body scrolling
 function bodyLock() {
-    // после скрытия скроллинга боди сдвигается вправо на ширину скроллинг и для того чтобы это не случилось я высчитываю этот сдвиг и добавляю его к боди и фиксированным элементам в качестве правого паддинга  
-    const lockPaddingValue = window.innerWidth - wrapper.offsetWidth;
-    if (lockPadding.length > 0) {
-        for (let i = 0; i < lockPadding.length; i++) {
-            const elem = lockPadding[i];
-            elem.style.paddingRight = lockPaddingValue + 'px';
-        }
-    }
-    body.style.paddingRight = lockPaddingValue + 'px';
-    wrapper.style.paddingRight = lockPaddingValue + 'px';
 
-    // запрещаю скроллинг 
     body.classList.add('_noscroll');
     wrapper.classList.add('_noscroll');
-
-    // подстраховка от повторных нажатий 
-    // я блокирую клик по попапу на время выполнения анимации по клике на попап
     unlock = false;
     setTimeout(function () {
         unlock = true;
     }, timeout);
 }
 
-// делает обратные дейсвия функции bodyLock() 
 function bodyUnLock() {
     setTimeout(function () {
-        for (let i = 0; i < lockPadding.length; i++) {
-            const elem = lockPadding[i];
-            elem.style.paddingRight = '0px';
-        }
-        body.style.paddingRight = '0px';
-        wrapper.style.paddingRight = '0px';
         body.classList.remove('_noscroll');
         wrapper.classList.remove('_noscroll');
     }, timeout);
@@ -126,5 +146,6 @@ if (document.querySelector('.contact__form-phone')) {
 if (document.querySelector('.popup__form-phone')) {
     $(".popup__form-phone").mask("+7(999)999-99-99");
 };
+
 
 import './map.js';

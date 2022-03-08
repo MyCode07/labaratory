@@ -277,7 +277,7 @@
                                     cols="30" rows="6"></textarea>
                                 <button type="submit" class="contact__form-btn blue-btn">задать вопрос</button>
                                 <div class="contact__form-confidence" id="confidence-dasktop">
-                                    <input type="checkbox" id="agreement" name="scales" unchecked>
+                                    <input type="checkbox" id="agreement" name="scales" checked>
                                     <label for="agreement" id="agreement-label">Я согласен с условиями обработки
                                         данных</label>
                                 </div>
@@ -305,6 +305,10 @@
                 <div id="map" class="location__map"> </div>
                 <div class="balloon">
                     <div class="balloon__body">
+                        <div class="balloon__close">
+                            <span></span>
+                            <span></span>
+                        </div>
                         <h6 class="balloon__title">Наши контакты:</h6>
                         <a href="" class="balloon__item">
                             <img src="img/svg/phone-balloon.svg">
@@ -338,6 +342,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js?_v=20220205140131"
         type="text/javascript"></script>
     <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU"></script>
+    <script src="files/form.js"></script>
     <script src="js/app.min.js"></script>
 </body>
 

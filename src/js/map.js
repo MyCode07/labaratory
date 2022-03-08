@@ -10,7 +10,7 @@ function init() {
         iconLayout: 'default#image',
         iconImageHref: 'img/svg/location-blue.svg',
         iconImageSize: [117, 151],
-        iconImageOffset: [-10, -140]
+        iconImageOffset: [-60, -160]
     });
 
     map.controls.remove('searchControl'); // удаляем поиск

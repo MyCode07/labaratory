@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аромастилист</title>
-    <!-- <link rel="stylesheet" href="files/swiper.min.css?_v=20220308002127"> -->
-    <link rel="stylesheet" href="css/style.min.css?_v=20220308002127">
+    <title>Labaratory</title>
+    <!-- <link rel="stylesheet" href="files/swiper.min.css?_v=20220308212501"> -->
+    <link rel="stylesheet" href="css/style.min.css?_v=20220308212501">
 </head>
 
 <body>
@@ -25,11 +25,11 @@
             <div class="popup__form-body">
                 <h6 class="popup__form-title">Заполните форму</h6>
                 <p class="popup__form-subtitle">И получите консультацию нашего специалиста</p>
-                <input type="text" placeholder="Ваше имя" class="popup__form-name input-name _popup-req" name="popup_name">
-                <input type="text" placeholder="Ваш телефон" class="popup__form-phone _popup-req" name="popup_phone">
+                <input type="text" placeholder="Ваше имя" class="popup__form-name input-name _req" name="popup_name">
+                <input type="text" placeholder="Ваш телефон" class="popup__form-phone _req" name="popup_phone">
                 <div class="popup__form-confidence">
-                    <input type="checkbox" id="agreement" name="scales" unchecked>
-                    <label for="agreement" id="agreement-label">Я согласен с условиями обработки данных</label>
+                    <input type="checkbox" id="popup__agreement" checked>
+                    <label for="agreement" id="popup__agreement-label">Я согласен с условиями обработки данных</label>
                 </div>
                 <button type="submit" class="popup__form-btn blue-btn">отправить</button>
             </div>
@@ -85,16 +85,19 @@
                     </div>
                     <ul class="header__menu-body ">
                         <li class="header__menu-item ">
-                            <a href="" class="header__menu-link">О лаборатории</a>
+                            <a href="" class="header__menu-link _scrollto-main">О лаборатории</a>
                         </li>
                         <li class="header__menu-item ">
-                            <a href="" class="header__menu-link">Испытания</a>
+                            <a href="" class="header__menu-link _scrollto-services">Услуги</a>
                         </li>
                         <li class="header__menu-item ">
-                            <a href="" class="header__menu-link">Услуги и цены</a>
+                            <a href="" class="header__menu-link _scrollto-steps">Порядок оказания</a>
                         </li>
                         <li class="header__menu-item ">
-                            <a href="" class="header__menu-link">Контакты</a>
+                            <a href="" class="header__menu-link _scrollto-contactus">Задать вопрос</a>
+                        </li>
+                        <li class="header__menu-item ">
+                            <a href="" class="header__menu-link _scrollto-location">Контакты </a>
                         </li>
                     </ul>
                 </nav>
@@ -448,7 +451,7 @@
                                     cols="30" rows="6"></textarea>
                                 <button type="submit" class="contact__form-btn blue-btn">задать вопрос</button>
                                 <div class="contact__form-confidence" id="confidence-dasktop">
-                                    <input type="checkbox" id="agreement" name="scales" unchecked>
+                                    <input type="checkbox" id="agreement" name="scales" checked>
                                     <label for="agreement" id="agreement-label">Я согласен с условиями обработки
                                         данных</label>
                                 </div>
@@ -476,6 +479,10 @@
                 <div id="map" class="location__map"> </div>
                 <div class="balloon">
                     <div class="balloon__body">
+                        <div class="balloon__close">
+                            <span></span>
+                            <span></span>
+                        </div>
                         <h6 class="balloon__title">Наши контакты:</h6>
                         <a href="" class="balloon__item">
                             <img src="img/svg/phone-balloon.svg">
@@ -511,16 +518,19 @@
                 <nav class="footer__menu">
                     <ul class="footer__menu-body ">
                         <li class="footer__menu-item ">
-                            <a href="" class="footer__menu-link">О лаборатории</a>
+                            <a href="" class="footer__menu-link _scrollto-main">О лаборатории</a>
                         </li>
                         <li class="footer__menu-item ">
-                            <a href="" class="footer__menu-link">Испытания</a>
+                            <a href="" class="footer__menu-link _scrollto-services">Услуги</a>
                         </li>
                         <li class="footer__menu-item ">
-                            <a href="" class="footer__menu-link">Услуги и цены</a>
+                            <a href="" class="footer__menu-link _scrollto-steps">Порядок оказания</a>
                         </li>
                         <li class="footer__menu-item ">
-                            <a href="" class="footer__menu-link">Контакты</a>
+                            <a href="" class="footer__menu-link _scrollto-contactus">Задать вопрос</a>
+                        </li>
+                        <li class="footer__menu-item ">
+                            <a href="" class="footer__menu-link _scrollto-location">Контакты </a>
                         </li>
                     </ul>
                 </nav>
@@ -559,8 +569,9 @@
         type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js?_v=20220205140131"
         type="text/javascript"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20220308002127"></script>
-    <script src="js/app.min.js?_v=20220308002127"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20220308212501"></script>
+    <script src="files/form.js?_v=20220308212501"></script>
+    <script src="js/app.min.js?_v=20220308212501"></script>
 </body>
 
 </html>

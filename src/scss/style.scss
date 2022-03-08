@@ -7,9 +7,7 @@
 @import "ya-map";
 
 body {
-    &._noscroll {
-        overflow: hidden;
-    }
+    overflow: auto;
 }
 
 .wrapper {
@@ -94,7 +92,7 @@ body {
         &-item {
             display: flex;
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
 
             span {
                 font-family: Roboto;
@@ -136,7 +134,7 @@ body {
                 svg {
                     @include adaptive-value("height", 20, 15, 1);
                     @include adaptive-value("width", 20, 15, 1);
-                    @include adaptive-value("margin-right", 5, 0, 1);
+                    margin-right: 5px;
                 }
             }
         }
@@ -226,6 +224,7 @@ body {
             // .header__menu-top-close
 
             &-close {
+                cursor: pointer;
                 @include adaptive-value("width", 40, 30, 1);
                 @include adaptive-value("height", 40, 30, 1);
                 position: relative;
@@ -247,10 +246,11 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            @include adaptive-value("margin-right", 266, -80, 1);
+            @include adaptive-value("margin-right", 50, -75, 1);
+           
 
             & :not(:last-child) {
-                @include adaptive-value("margin-right", 100, -20, 1);
+                @include adaptive-value("margin-right", 100, -60, 1);
             }
 
             @media (max-width: 992px) {
@@ -296,6 +296,7 @@ body {
     // .header__burger
 
     &__burger {
+        cursor: pointer;
         @include adaptive-value("width", 30, 25, 1);
         @include adaptive-value("height", 15, 13, 1);
         position: relative;
@@ -330,11 +331,12 @@ body {
 }
 
 .page {
+    background-color: rgba(248, 248, 248, 1);
 }
 
 .main {
     @media (min-width: 1437px) {
-        margin-bottom: 306;
+        margin-bottom: 306px;
     }
     margin-bottom: calc(0px + 306 * ((100vw - 360px) / 1077));
 
@@ -412,7 +414,7 @@ body {
         @include adaptive-value("padding-top", 60, 28, 1);
 
         @include adaptive-value("margin-bottom", 68, 230, 1);
-
+        z-index: 2;
         // .main__title-marked
 
         &-marked {
@@ -435,7 +437,7 @@ body {
         @include adaptive-value("top", 50, 111, 1);
         @include adaptive-value("right", 12, 36, 1);
 
-        z-index: -1;
+        z-index: 0;
         img {
             position: absolute;
             width: 100%;
@@ -454,6 +456,7 @@ body {
         @include adaptive-value("font-size", 21, 10, 1);
         @include adaptive-value("margin-bottom", 315, 71, 1);
         @include adaptive-value("border-radius", 12, 5, 1);
+        z-index: 2;
     }
 
     // .main__intro
@@ -643,6 +646,7 @@ body {
     // .item-services__body
 
     &__body {
+        background-color: #fff;
         @include adaptive-value("padding-top", 60, 29, 1);
         @include adaptive-value("padding-bottom", 60, 29, 1);
         @include adaptive-value("padding-left", 60, 29, 1);
@@ -807,7 +811,7 @@ body {
             }
             position: absolute;
             width: 73%;
-            z-index: -2;
+            z-index: 0;
             svg {
                 position: absolute;
                 width: 100%;
@@ -911,10 +915,27 @@ body {
     // .item-step__dashedline
 
     &#item-step-2 {
+        @media (max-width: 768px) {
+            z-index: 0;
+        }
     }
+
     &#item-step-4 {
+        @media (max-width: 768px) {
+            z-index: 0;
+        }
     }
     &#item-step-6 {
+        @media (max-width: 768px) {
+            z-index: 0;
+        }
+    }
+    &#item-step-1 ,
+    &#item-step-3 ,
+    &#item-step-5 {
+        .item-step__dashedline{
+            display: none;
+        }
     }
 
     &__dashedline {
@@ -1092,7 +1113,7 @@ body {
             height: 100%;
             left: 0;
             top: 0;
-            z-index: -1;
+            z-index: 0;
 
             img {
                 position: absolute;
@@ -1115,6 +1136,8 @@ body {
             flex-direction: column;
             align-items: center;
             @include adaptive-value("margin-bottom", 94, 52, 1);
+            position: relative;
+            z-index: 0;
         }
 
         // .contact__us-title
@@ -1140,6 +1163,8 @@ body {
             width: 100%;
             @include adaptive-value("height", 219, 47, 1);
             background-color: #fff;
+            position: relative;
+            z-index: 0;
 
             // .bottom-contact__body
 
@@ -1202,6 +1227,15 @@ body {
             margin: 0 0;
         }
 
+        &._sending {
+            input,
+            button,
+            textarea {
+                background: rgba(0, 0, 0, 0.6);
+                pointer-events: none;
+            }
+        }
+
         background-color: #fff;
         border-radius: 20px;
         @include adaptive-value("padding-top", 40, 10, 1);
@@ -1261,12 +1295,15 @@ body {
             color: #9e9e9e;
             background-color: #f7f7f7;
             width: 100%;
-            @include adaptive-value('border-radius', 20, 10, 1);
+            @include adaptive-value("border-radius", 20, 10, 1);
             @include adaptive-value("padding-top", 27, 17, 1);
             @include adaptive-value("padding-bottom", 29, 18, 1);
             @include adaptive-value("padding-right", 15, 7, 1);
             @include adaptive-value("padding-left", 15, 7, 1);
             width: 100%;
+            &._error {
+                border: 1px solid red;
+            }
         }
 
         &-inputs {
@@ -1328,7 +1365,11 @@ body {
 
             &#confidence-dasktop {
                 @media (max-width: 600px) {
-                    display: none;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    visibility: hidden;
+                    opacity: 0;
                 }
             }
             &#confidence-mobile {
@@ -1428,11 +1469,11 @@ body {
     &__menu {
         flex: 1 1 auto;
         @media (min-width: 1437px) {
-            margin-right: 128px;
-            margin-left: 59px;
+            margin-right: 39px;
+            margin-left: 39px;
         }
-        margin-right: calc(0px + 128 * ((100vw - 360px) / 1077));
-        margin-left: calc(0px + 59 * ((100vw - 360px) / 1077));
+        margin-right: calc(0px + 39 * ((100vw - 360px) / 1077));
+        margin-left: calc(0px + 39 * ((100vw - 360px) / 1077));
 
         @media (max-width: 1437px) {
             margin-right: auto;
@@ -1450,7 +1491,7 @@ body {
             justify-content: center;
             & :not(:last-child) {
                 @media (min-width: 1438px) {
-                    margin-right: 60px;
+                    margin-right: 40px;
                 }
                 margin-right: calc(15px + 45 * ((100vw - 360px) / 1077));
             }

@@ -1,12 +1,30 @@
 [class*="copyrights-pane"] {
-	display: none !important;
+    display: none !important;
 }
 
 .balloon {
     position: absolute;
-    right: 262px;
     @include adaptive-value("right", 262, 20, 1);
     @include adaptive-value("top", 13, 50, 1);
+    transition: all 0.3s ease 0s;
+    &._hidden {
+        @include adaptive-value("height", 90, 40, 1);
+        right: 10px !important;
+        top: 10px !important;
+        overflow: hidden;
+
+        .balloon__body {
+            @include adaptive-value("width", 420, 210, 1);
+            @include adaptive-value('padding-top',24, 10, 1);
+            
+        }
+
+        .balloon__close {
+            & :last-child {
+                transform: translate(0, -50%) rotate(90deg);
+            }
+        }
+    }
 
     // .balloon__container
 
@@ -19,11 +37,45 @@
         @include adaptive-value("padding-top", 65, 30, 1);
         @include adaptive-value("padding-bottom", 43, 23, 1);
         @include adaptive-value("padding-left", 69, 30, 1);
-        @include adaptive-value("padding-right", 40,30, 1);
+        @include adaptive-value("padding-right", 40, 30, 1);
         width: 100%;
         @include adaptive-value("border-radius", 20, 10, 1);
         background: #ffffff;
         @include adaptive-value("width", 540, 320, 1);
+        position: relative;
+    }
+
+    // .balloon__close
+
+    &__close {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+
+        position: absolute;
+        @include adaptive-value("right", 30, 10, 1);
+        @include adaptive-value("top", 30, 10, 1);
+
+        @include adaptive-value("width", 30, 20, 1);
+        @include adaptive-value("height", 30, 20, 1);
+
+        span {
+            transition: all 0.3s ease 0s;
+
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            @include adaptive-value("height", 2, 1, 1);
+            background-color: #000;
+        }
+
+        & :first-child {
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        & :last-child {
+            top: 50%;
+            transform: translate(0, -50%);
+        }
     }
 
     // .balloon__title
