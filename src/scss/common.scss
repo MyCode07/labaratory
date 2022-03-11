@@ -6,18 +6,25 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #ffffff;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            transform: translate(3px,  -3px);
+            box-shadow: -6px 6px 6px 2px rgba(#252525,0.8);
+        }
+    }
 }
 
 .section-title {
     font-family: Gilroy;
     font-weight: 400;
-    @include adaptive-value('font-size', 50, 15, 1);
+    @include adaptive-value("font-size", 50, 15, 1);
     line-height: 120%;
     text-align: center;
     color: #000000;
 }
 
-mark{
+mark {
     background-color: inherit;
     line-height: inherit;
 }

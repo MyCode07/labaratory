@@ -1,0 +1,27 @@
+@@include('html/head.html')
+
+<body>
+    <!-- <?php if (is_page_template( 'contacts.php' ) or is_page_template( 'voda.php' ) or is_page_template( 'production.php' ) or is_page_template( 'delivery.php' ) or is_page_template( 'drinks.php' ) or is_page_template( 'privacy.php' )) body_class('page-wrapper'); ?> -->
+    <div class="wrapper"> 
+        @@include('html/popup.html')
+        @@include('html/header.html')
+        <main>
+            <link rel="stylesheet" href="css/style.min.css">
+            <section class="privacy__section">
+                
+            </section>
+        </main>
+
+        @@include('html/footer.html')
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js?_v=20220205140131"
+        type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js?_v=20220205140131"
+        type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU"></script>
+    <script src="files/form.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 let center = [55.648634766206186, 37.50528321163933];
 let phoneIcon = '';
+const map_icon_uri = document.getElementById('map-icon').getAttribute('data-uri');
 function init() {
     let map = new ymaps.Map('map', {
         center: center,
@@ -8,7 +9,7 @@ function init() {
 
     let placemark = new ymaps.Placemark(center, {}, {
         iconLayout: 'default#image',
-        iconImageHref: 'img/svg/location-blue.svg',
+        iconImageHref:  `${map_icon_uri}`,
         iconImageSize: [117, 151],
         iconImageOffset: [-60, -160]
     });

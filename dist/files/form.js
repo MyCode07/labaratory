@@ -1,16 +1,16 @@
 "use strict"
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function (e) {
     if (document.querySelector('.contact__form')) {
         const form = document.querySelector('.contact__form');
         form.addEventListener('submit', formSend);
-    }
+    } 
 
     if (document.querySelector('.popup__form')) {
         const form2 = document.querySelector('.popup__form');
         form2.addEventListener('submit', popupFormSend);
     }
-});
+}); 
 
 function formValidate(form) {
     let error = 0;
@@ -26,7 +26,7 @@ function formValidate(form) {
         else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
             formAddError(input);
             error++;
-        }  
+        }
     }
     return error;
 }
@@ -39,17 +39,19 @@ function formRemoveError(input) {
     input.classList.remove('_error');
 }
 
-async function formSend(e) {
-    const form = document.querySelector('.header__form');
-    e.preventDefault();
+const uri = document.getElementById('sendmail').getAttribute('data-uri');
+ 
 
+async function formSend() {
+    const form = document.querySelector('.contact__form');
+    e.preventDefault();
     let error = formValidate(form);
 
     let formData = new FormData(form);
 
     if (error === 0) {
         form.classList.add('_sending');
-        let response = await fetch("./sendmail.php", {
+        let response = await fetch(`${uri}`, {
             method: 'POST',
             body: formData
 
@@ -60,26 +62,29 @@ async function formSend(e) {
 
             form.reset();
             form.classList.remove('_sending');
-        } else {
+        }
+        else {
             alert("Ошибка");
             form.classList.remove('_sending');
         }
-    } else {
+    }
+    else {
         alert('Заполните обязательные поля');
     }
 
 }
 
 
-async function popupFormSend(productForm) {
+async function popupFormSend() {
     const formOrder = document.querySelector('.popup__form');
+    e.preventDefault();
     let error = formValidate(formOrder);
 
     let formData = new FormData(formOrder);
 
     if (error === 0) {
         formOrder.classList.add('_sending');
-        let response = await fetch("./sendmail.php", {
+        let response = await fetch(`${uri}`, {
             method: 'POST',
             body: formData
         });
@@ -93,7 +98,6 @@ async function popupFormSend(productForm) {
         }
         else {
             alert("Ошибка");
-            document.querySelector('.popup').classList.remove('_open');
             formOrder.classList.remove('_sending');
         }
     }

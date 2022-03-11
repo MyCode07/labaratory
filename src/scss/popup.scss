@@ -52,7 +52,7 @@
     &__close {
         @include adaptive-value("width", 47, 23, 1);
         @include adaptive-value("height", 47, 23, 1);
-
+        cursor: pointer;
         position: absolute;
         right: 68px;
         top: 50px;
@@ -162,6 +162,7 @@
         // .popup__form-confidence
 
         &-confidence {
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -176,6 +177,7 @@
             }
 
             input {
+                cursor: pointer;
                 @include adaptive-value("width", 25, 15, 1);
                 @include adaptive-value("height", 25, 15, 1);
                 @include adaptive-value("margin-right", 9, 5, 1);
@@ -183,7 +185,8 @@
                 border: 1px solid black;
             }
 
-            label {
+            a {
+                cursor: pointer;
                 font-family: Roboto;
                 font-weight: 300;
                 font-size: 18px;
@@ -192,6 +195,9 @@
                 text-align: center;
                 letter-spacing: 0.05em;
                 color: #393939;
+                mark{
+                    font-weight: 700;
+                }
             }
         }
 
